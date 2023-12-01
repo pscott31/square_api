@@ -1,0 +1,1465 @@
+[package]
+name = "square_api"
+edition = "2021"
+version = "0.1.0"
+build = "build.rs"
+readme = "README.md"
+
+[dependencies]
+futures = "0.3.25"
+httpclient = "0.18.0"
+serde_json = "1.0.81"
+
+[dependencies.chrono]
+version = "0.4.26"
+features = ["serde"]
+
+[dependencies.serde]
+version = "1.0.137"
+features = ["derive"]
+
+[build-dependencies]
+anyhow = "1.0.75"
+
+[build-dependencies.libninja]
+path = "../libninja/libninja"
+features = []
+
+[build-dependencies.ln-core]
+path = "../libninja/core"
+features = []
+
+[lib]
+path = "src/lib.rs"
+name = "square_api"
+edition = "2021"
+crate-type = ["rlib"]
+required-features = []
+
+[[example]]
+path = "examples/accept_dispute.rs"
+name = "accept_dispute"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/accumulate_loyalty_points.rs"
+name = "accumulate_loyalty_points"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/add_group_to_customer.rs"
+name = "add_group_to_customer"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/adjust_loyalty_points.rs"
+name = "adjust_loyalty_points"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/authorize.rs"
+name = "authorize"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/batch_change_inventory.rs"
+name = "batch_change_inventory"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/batch_delete_catalog_objects.rs"
+name = "batch_delete_catalog_objects"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/batch_retrieve_catalog_objects.rs"
+name = "batch_retrieve_catalog_objects"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/batch_retrieve_inventory_changes.rs"
+name = "batch_retrieve_inventory_changes"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/batch_retrieve_inventory_counts.rs"
+name = "batch_retrieve_inventory_counts"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/batch_retrieve_orders.rs"
+name = "batch_retrieve_orders"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/batch_upsert_catalog_objects.rs"
+name = "batch_upsert_catalog_objects"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_create_team_members.rs"
+name = "bulk_create_team_members"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_create_vendors.rs"
+name = "bulk_create_vendors"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_retrieve_vendors.rs"
+name = "bulk_retrieve_vendors"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_update_team_members.rs"
+name = "bulk_update_team_members"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_update_vendors.rs"
+name = "bulk_update_vendors"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_upsert_customer_custom_attributes.rs"
+name = "bulk_upsert_customer_custom_attributes"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/calculate_loyalty_points.rs"
+name = "calculate_loyalty_points"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/calculate_order.rs"
+name = "calculate_order"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/cancel_booking.rs"
+name = "cancel_booking"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/cancel_invoice.rs"
+name = "cancel_invoice"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/cancel_loyalty_promotion.rs"
+name = "cancel_loyalty_promotion"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/cancel_payment.rs"
+name = "cancel_payment"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/cancel_payment_by_idempotency_key.rs"
+name = "cancel_payment_by_idempotency_key"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/cancel_subscription.rs"
+name = "cancel_subscription"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/cancel_terminal_action.rs"
+name = "cancel_terminal_action"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/cancel_terminal_checkout.rs"
+name = "cancel_terminal_checkout"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/cancel_terminal_refund.rs"
+name = "cancel_terminal_refund"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/capture_transaction.rs"
+name = "capture_transaction"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/catalog_info.rs"
+name = "catalog_info"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/clone_order.rs"
+name = "clone_order"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/complete_payment.rs"
+name = "complete_payment"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_booking.rs"
+name = "create_booking"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_break_type.rs"
+name = "create_break_type"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_card.rs"
+name = "create_card"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_catalog_image.rs"
+name = "create_catalog_image"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_checkout.rs"
+name = "create_checkout"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_customer.rs"
+name = "create_customer"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_customer_card.rs"
+name = "create_customer_card"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_customer_custom_attribute_definition.rs"
+name = "create_customer_custom_attribute_definition"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_customer_group.rs"
+name = "create_customer_group"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_device_code.rs"
+name = "create_device_code"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_dispute_evidence_file.rs"
+name = "create_dispute_evidence_file"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_dispute_evidence_text.rs"
+name = "create_dispute_evidence_text"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_gift_card.rs"
+name = "create_gift_card"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_gift_card_activity.rs"
+name = "create_gift_card_activity"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_invoice.rs"
+name = "create_invoice"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_location.rs"
+name = "create_location"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_loyalty_account.rs"
+name = "create_loyalty_account"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_loyalty_promotion.rs"
+name = "create_loyalty_promotion"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_loyalty_reward.rs"
+name = "create_loyalty_reward"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_mobile_authorization_code.rs"
+name = "create_mobile_authorization_code"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_order.rs"
+name = "create_order"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_payment.rs"
+name = "create_payment"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_payment_link.rs"
+name = "create_payment_link"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_refund.rs"
+name = "create_refund"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_shift.rs"
+name = "create_shift"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_subscription.rs"
+name = "create_subscription"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_team_member.rs"
+name = "create_team_member"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_terminal_action.rs"
+name = "create_terminal_action"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_terminal_checkout.rs"
+name = "create_terminal_checkout"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_terminal_refund.rs"
+name = "create_terminal_refund"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_vendor.rs"
+name = "create_vendor"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_webhook_subscription.rs"
+name = "create_webhook_subscription"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_break_type.rs"
+name = "delete_break_type"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_catalog_object.rs"
+name = "delete_catalog_object"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_customer.rs"
+name = "delete_customer"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_customer_card.rs"
+name = "delete_customer_card"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_customer_custom_attribute.rs"
+name = "delete_customer_custom_attribute"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_customer_custom_attribute_definition.rs"
+name = "delete_customer_custom_attribute_definition"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_customer_group.rs"
+name = "delete_customer_group"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_dispute_evidence.rs"
+name = "delete_dispute_evidence"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_invoice.rs"
+name = "delete_invoice"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_loyalty_reward.rs"
+name = "delete_loyalty_reward"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_payment_link.rs"
+name = "delete_payment_link"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_shift.rs"
+name = "delete_shift"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_snippet.rs"
+name = "delete_snippet"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_subscription_action.rs"
+name = "delete_subscription_action"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_webhook_subscription.rs"
+name = "delete_webhook_subscription"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/deprecated_batch_change_inventory.rs"
+name = "deprecated_batch_change_inventory"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/deprecated_batch_retrieve_inventory_changes.rs"
+name = "deprecated_batch_retrieve_inventory_changes"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/deprecated_batch_retrieve_inventory_counts.rs"
+name = "deprecated_batch_retrieve_inventory_counts"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/deprecated_retrieve_inventory_adjustment.rs"
+name = "deprecated_retrieve_inventory_adjustment"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/deprecated_retrieve_inventory_physical_count.rs"
+name = "deprecated_retrieve_inventory_physical_count"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/disable_card.rs"
+name = "disable_card"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_bank_account.rs"
+name = "get_bank_account"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_bank_account_by_v_1_id.rs"
+name = "get_bank_account_by_v_1_id"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_break_type.rs"
+name = "get_break_type"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_device_code.rs"
+name = "get_device_code"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_employee_wage.rs"
+name = "get_employee_wage"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_invoice.rs"
+name = "get_invoice"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_payment.rs"
+name = "get_payment"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_payment_refund.rs"
+name = "get_payment_refund"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_payout.rs"
+name = "get_payout"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_shift.rs"
+name = "get_shift"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_team_member_wage.rs"
+name = "get_team_member_wage"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_terminal_action.rs"
+name = "get_terminal_action"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_terminal_checkout.rs"
+name = "get_terminal_checkout"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_terminal_refund.rs"
+name = "get_terminal_refund"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/link_customer_to_gift_card.rs"
+name = "link_customer_to_gift_card"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_bank_accounts.rs"
+name = "list_bank_accounts"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_bookings.rs"
+name = "list_bookings"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_break_types.rs"
+name = "list_break_types"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_cards.rs"
+name = "list_cards"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_cash_drawer_shift_events.rs"
+name = "list_cash_drawer_shift_events"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_cash_drawer_shifts.rs"
+name = "list_cash_drawer_shifts"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_catalog.rs"
+name = "list_catalog"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_customer_custom_attribute_definitions.rs"
+name = "list_customer_custom_attribute_definitions"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_customer_custom_attributes.rs"
+name = "list_customer_custom_attributes"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_customer_groups.rs"
+name = "list_customer_groups"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_customer_segments.rs"
+name = "list_customer_segments"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_customers.rs"
+name = "list_customers"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_device_codes.rs"
+name = "list_device_codes"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_dispute_evidence.rs"
+name = "list_dispute_evidence"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_disputes.rs"
+name = "list_disputes"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_employee_wages.rs"
+name = "list_employee_wages"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_employees.rs"
+name = "list_employees"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_gift_card_activities.rs"
+name = "list_gift_card_activities"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_gift_cards.rs"
+name = "list_gift_cards"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_invoices.rs"
+name = "list_invoices"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_locations.rs"
+name = "list_locations"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_loyalty_programs.rs"
+name = "list_loyalty_programs"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_loyalty_promotions.rs"
+name = "list_loyalty_promotions"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_merchants.rs"
+name = "list_merchants"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_payment_links.rs"
+name = "list_payment_links"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_payment_refunds.rs"
+name = "list_payment_refunds"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_payments.rs"
+name = "list_payments"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_payout_entries.rs"
+name = "list_payout_entries"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_payouts.rs"
+name = "list_payouts"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_refunds.rs"
+name = "list_refunds"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_settlements.rs"
+name = "list_settlements"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_sites.rs"
+name = "list_sites"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_subscription_events.rs"
+name = "list_subscription_events"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_team_member_booking_profiles.rs"
+name = "list_team_member_booking_profiles"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_team_member_wages.rs"
+name = "list_team_member_wages"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_transactions.rs"
+name = "list_transactions"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_webhook_event_types.rs"
+name = "list_webhook_event_types"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_webhook_subscriptions.rs"
+name = "list_webhook_subscriptions"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_webhooks.rs"
+name = "list_webhooks"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_workweek_configs.rs"
+name = "list_workweek_configs"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/obtain_token.rs"
+name = "obtain_token"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/pause_subscription.rs"
+name = "pause_subscription"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/pay_order.rs"
+name = "pay_order"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/publish_invoice.rs"
+name = "publish_invoice"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/redeem_loyalty_reward.rs"
+name = "redeem_loyalty_reward"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/refund_payment.rs"
+name = "refund_payment"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/register_domain.rs"
+name = "register_domain"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/remove_group_from_customer.rs"
+name = "remove_group_from_customer"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/renew_token.rs"
+name = "renew_token"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/resume_subscription.rs"
+name = "resume_subscription"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_booking.rs"
+name = "retrieve_booking"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_business_booking_profile.rs"
+name = "retrieve_business_booking_profile"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_card.rs"
+name = "retrieve_card"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_cash_drawer_shift.rs"
+name = "retrieve_cash_drawer_shift"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_catalog_object.rs"
+name = "retrieve_catalog_object"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_customer.rs"
+name = "retrieve_customer"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_customer_custom_attribute.rs"
+name = "retrieve_customer_custom_attribute"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_customer_custom_attribute_definition.rs"
+name = "retrieve_customer_custom_attribute_definition"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_customer_group.rs"
+name = "retrieve_customer_group"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_customer_segment.rs"
+name = "retrieve_customer_segment"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_dispute.rs"
+name = "retrieve_dispute"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_dispute_evidence.rs"
+name = "retrieve_dispute_evidence"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_employee.rs"
+name = "retrieve_employee"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_gift_card.rs"
+name = "retrieve_gift_card"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_gift_card_from_gan.rs"
+name = "retrieve_gift_card_from_gan"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_gift_card_from_nonce.rs"
+name = "retrieve_gift_card_from_nonce"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_inventory_adjustment.rs"
+name = "retrieve_inventory_adjustment"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_inventory_changes.rs"
+name = "retrieve_inventory_changes"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_inventory_count.rs"
+name = "retrieve_inventory_count"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_inventory_physical_count.rs"
+name = "retrieve_inventory_physical_count"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_inventory_transfer.rs"
+name = "retrieve_inventory_transfer"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_location.rs"
+name = "retrieve_location"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_loyalty_account.rs"
+name = "retrieve_loyalty_account"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_loyalty_program.rs"
+name = "retrieve_loyalty_program"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_loyalty_promotion.rs"
+name = "retrieve_loyalty_promotion"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_loyalty_reward.rs"
+name = "retrieve_loyalty_reward"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_merchant.rs"
+name = "retrieve_merchant"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_order.rs"
+name = "retrieve_order"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_payment.rs"
+name = "retrieve_payment"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_payment_link.rs"
+name = "retrieve_payment_link"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_settlement.rs"
+name = "retrieve_settlement"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_snippet.rs"
+name = "retrieve_snippet"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_subscription.rs"
+name = "retrieve_subscription"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_team_member.rs"
+name = "retrieve_team_member"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_team_member_booking_profile.rs"
+name = "retrieve_team_member_booking_profile"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_transaction.rs"
+name = "retrieve_transaction"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_vendor.rs"
+name = "retrieve_vendor"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_wage_setting.rs"
+name = "retrieve_wage_setting"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/retrieve_webhook_subscription.rs"
+name = "retrieve_webhook_subscription"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/revoke_token.rs"
+name = "revoke_token"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/search_availability.rs"
+name = "search_availability"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/search_catalog_items.rs"
+name = "search_catalog_items"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/search_catalog_objects.rs"
+name = "search_catalog_objects"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/search_customers.rs"
+name = "search_customers"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/search_invoices.rs"
+name = "search_invoices"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/search_loyalty_accounts.rs"
+name = "search_loyalty_accounts"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/search_loyalty_events.rs"
+name = "search_loyalty_events"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/search_loyalty_rewards.rs"
+name = "search_loyalty_rewards"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/search_orders.rs"
+name = "search_orders"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/search_shifts.rs"
+name = "search_shifts"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/search_subscriptions.rs"
+name = "search_subscriptions"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/search_team_members.rs"
+name = "search_team_members"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/search_terminal_actions.rs"
+name = "search_terminal_actions"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/search_terminal_checkouts.rs"
+name = "search_terminal_checkouts"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/search_terminal_refunds.rs"
+name = "search_terminal_refunds"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/search_vendors.rs"
+name = "search_vendors"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/submit_evidence.rs"
+name = "submit_evidence"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/swap_plan.rs"
+name = "swap_plan"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/test_webhook_subscription.rs"
+name = "test_webhook_subscription"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unlink_customer_from_gift_card.rs"
+name = "unlink_customer_from_gift_card"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_booking.rs"
+name = "update_booking"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_break_type.rs"
+name = "update_break_type"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_catalog_image.rs"
+name = "update_catalog_image"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_customer.rs"
+name = "update_customer"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_customer_custom_attribute_definition.rs"
+name = "update_customer_custom_attribute_definition"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_customer_group.rs"
+name = "update_customer_group"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_invoice.rs"
+name = "update_invoice"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_item_modifier_lists.rs"
+name = "update_item_modifier_lists"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_item_taxes.rs"
+name = "update_item_taxes"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_location.rs"
+name = "update_location"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_order.rs"
+name = "update_order"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_payment.rs"
+name = "update_payment"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_payment_link.rs"
+name = "update_payment_link"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_shift.rs"
+name = "update_shift"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_subscription.rs"
+name = "update_subscription"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_team_member.rs"
+name = "update_team_member"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_vendor.rs"
+name = "update_vendor"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_wage_setting.rs"
+name = "update_wage_setting"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_webhook_subscription.rs"
+name = "update_webhook_subscription"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_webhook_subscription_signature_key.rs"
+name = "update_webhook_subscription_signature_key"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_webhooks.rs"
+name = "update_webhooks"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_workweek_config.rs"
+name = "update_workweek_config"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/upsert_catalog_object.rs"
+name = "upsert_catalog_object"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/upsert_customer_custom_attribute.rs"
+name = "upsert_customer_custom_attribute"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/upsert_snippet.rs"
+name = "upsert_snippet"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/v_1_submit_batch.rs"
+name = "v_1_submit_batch"
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/void_transaction.rs"
+name = "void_transaction"
+edition = "2021"
+required-features = []

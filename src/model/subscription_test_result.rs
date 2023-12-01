@@ -1,0 +1,20 @@
+
+use serde::{Serialize, Deserialize};
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+pub struct SubscriptionTestResult {
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub created_at: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub id: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub payload: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub status_code: Option<i64>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub updated_at: Option<String>,
+}
+impl std::fmt::Display for SubscriptionTestResult {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {
+        write!(f, "{}", serde_json::to_string(self).unwrap())
+    }
+}
